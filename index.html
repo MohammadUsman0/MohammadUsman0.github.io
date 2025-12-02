@@ -3,166 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usman Mohammad - PhD Researcher</title>
-    <!--
-        Tailwind CSS CDN for utility-first styling.
-        This provides a wide range of classes for responsive design, spacing, typography, etc.
-    -->
+    <title>Usman Mohammad | PhD Researcher in Deep Learning, Computer Vision, & AI Applications</title>
+    
+    <meta name="description" content="Official website of Usman Mohammad, PhD Researcher at the University of Barcelona specializing in Deep Learning, Computer Vision, and AI applications in the medical domain. View publications and research interests.">
+    <meta name="author" content="Usman Mohammad">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <!--
-        Google Fonts for 'Inter' font.
-        Inter is a popular, highly readable font suitable for professional websites.
-    -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Usman Mohammad",
+      "jobTitle": "PhD Researcher in Deep Learning and Computer Vision",
+      "url": "https://mohammadusman0.github.io/", 
+      "image": "images/usman_profile_pic.png",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "University of Barcelona (UB)",
+        "url": "https://www.ub.edu/web/portal/en/"
+      },
+      "alumniOf": [
+        {"@type": "EducationalOrganization", "name": "COMSATS University Islamabad"},
+        {"@type": "EducationalOrganization", "name": "Islamia University Bahawalpur"}
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/mohammadusman01/",
+        "https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en",
+        "https://github.com/MohammadUsman0/"
+      ]
+    }
+    </script>
+    
     <style>
-        /* Apply the Inter font globally to the body */
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; 
         }
-        /* Custom CSS for the main heading (your name) to ensure consistent styling */
         .name {
-            font-size: 3rem; /* Equivalent to Tailwind's text-4xl */
-            font-weight: 800; /* Equivalent to Tailwind's font-extrabold */
-            color: #1a202c; /* A dark gray color */
+            font-size: 3rem; 
+            font-weight: 800; 
+            color: #1A202C; 
         }
-        /* Custom CSS for section headings */
         .heading {
-            font-size: 2.25rem; /* Equivalent to Tailwind's text-3xl */
-            font-weight: 700; /* Equivalent to Tailwind's font-bold */
-            color: #1a202c; /* A dark gray color */
-            margin-bottom: 1.5rem; /* Space below the heading */
-            border-bottom: 2px solid #e2e8f0; /* A light gray border for separation */
-            padding-bottom: 0.5rem; /* Padding above the border */
+            font-size: 2rem; 
+            font-weight: 700; 
+            color: #2D3748; 
+            margin-bottom: 1.5rem; 
+            border-bottom: 3px solid #4299E1; 
+            padding-bottom: 0.5rem; 
         }
     </style>
+    
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍🎓</text></svg>">
 </head>
-<!--
-    The body uses Tailwind classes for a light gray background and default text color.
-    'leading-relaxed' provides comfortable line spacing.
--->
-<body class="bg-gray-50 text-gray-800 leading-relaxed">
-    <!--
-        Main container for the page content.
-        'mx-auto' centers the container, 'px-4' adds horizontal padding,
-        'py-8' adds vertical padding, and 'max-w-4xl' limits the width for readability.
-    -->
-    <main class="container mx-auto px-4 py-8 max-w-4xl">
 
-        <!--
-            Header/About Me Section:
-            Uses flexbox for responsive layout. On small screens, items stack ('flex-col').
-            On medium screens and up ('md:'), they arrange in a row ('md:flex-row').
-            'items-center' centers items vertically, 'md:items-start' aligns to top on medium screens.
-            Adds spacing, background, padding, rounded corners, and shadow.
-        -->
-        <section class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8 mb-12 bg-white p-8 rounded-xl shadow-lg">
-            <div class="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-md">
+<body class="bg-gray-50 text-gray-800 leading-relaxed antialiased">
+    
+    <nav class="sticky top-0 z-50 bg-white shadow-md" aria-label="Main Navigation">
+        <div class="container mx-auto max-w-4xl px-4 py-3 flex justify-between items-center">
+            <a href="#top" class="text-xl font-bold text-blue-600 hover:text-blue-800">U. Mohammad</a>
+            <div class="space-x-4">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium hidden sm:inline">About</a>
+                <a href="#research" class="text-gray-600 hover:text-blue-600 font-medium hidden sm:inline">Research</a>
+                <a href="#publications" class="text-gray-600 hover:text-blue-600 font-medium hidden sm:inline">Publications</a>
+                <a href="data/Usman CV.pdf" class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out" download>
+                    <i class="fas fa-download mr-2"></i>Download CV
+                </a>
+            </div>
+        </div>
+    </nav>
 
-                <img src="images/usman_profile_pic.png" alt="Profile Photo" class="w-full h-full object-cover rounded-full">
+    <main class="container mx-auto px-4 py-12 max-w-4xl" id="top">
+
+        <section id="about" class="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10 mb-16 bg-white p-10 rounded-2xl shadow-xl border-t-4 border-blue-600">
+            <div class="flex-shrink-0 w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-2xl border-4 border-gray-100">
+                <img src="images/usman_profile_pic.png" alt="Headshot of Usman Mohammad, PhD Researcher specializing in Deep Learning at the University of Barcelona." class="w-full h-full object-cover">
             </div>
             <div class="text-center md:text-left">
-                <h1 class="name mb-2">Usman Mohammad</h1>
-                <p class="text-lg mb-4">
-                    I am a predoctoral researcher at the <a href="https://mat.ub.edu/en/" class="text-blue-600 hover:underline">Mathematics and Computer Sciences Department</a> of the
-                    <a href="https://www.ub.edu/web/portal/en/" class="text-blue-600 hover:underline">University of Barcelona</a>, specializing in Deep Learning and Computer Vision in Barcelona, Spain. My research focuses on leveraging advanced AI techniques to solve complex problems at the intersection of these fields.
+                <h1 class="name mb-3">Usman Mohammad</h1>
+                <p class="text-xl font-medium text-blue-600 mb-6">
+                    PhD Researcher in Deep Learning & Computer Vision
                 </p>
-                <p class="mb-4">
-                    With a strong background as a Machine Learning Engineer, I have a demonstrated history of working in AI within the medical domain. My expertise includes Python, R, and related technologies. I hold an Honours Master's degree in Computer Science from COMSATS University Islamabad (2021) and a BSCS from Islamia University Bahawalpur (2018).
+                <p class="text-lg mb-6 text-gray-700">
+                    I am a predoctoral researcher at the <a href="https://mat.ub.edu/en/" class="text-blue-600 hover:underline font-semibold">Mathematics and Computer Sciences Department</a> of the
+                    <a href="https://www.ub.edu/web/portal/en/" class="text-blue-600 hover:underline font-semibold">University of Barcelona</a>, specializing in **Deep Learning** and **Computer Vision** in Barcelona, Spain. My research focuses on leveraging advanced **AI techniques** to solve complex problems at the intersection of these fields.
                 </p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 text-lg">
-                    <a href="mailto:sci.ch.usman.shams@gmail.com" class="text-blue-600 hover:underline">Email</a>
-                    <span class="text-gray-400">/</span>
-                    <a href="data/Usman CV.pdf" class="text-blue-600 hover:underline">CV</a>
-                    <span class="text-gray-400">/</span>
-                    <a href="data/usman-bio.txt" class="text-blue-600 hover:underline">Bio</a>
-                    <span class="text-gray-400">/</span>
-                    <a href="https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-                    <span class="text-gray-400">/</span>
-                    <a href="https://www.linkedin.com/in/mohammadusman01/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <span class="text-gray-400">/</span>
-                    <a href="https://github.com/MohammadUsman0/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <p class="mb-8 text-gray-700">
+                    With a strong background as a Machine Learning Engineer, I have a demonstrated history of working in **AI within the medical domain**. My expertise includes **Python**, **R**, and related technologies. I hold an Honours Master's degree in Computer Science from **COMSATS University Islamabad** (2021) and a BSCS from **Islamia University Bahawalpur** (2018).
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-6 text-2xl">
+                    <a href="mailto:sci.ch.usman.shams@gmail.com" class="text-gray-500 hover:text-blue-600 transition duration-300" aria-label="Email Usman Mohammad">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en" class="text-gray-500 hover:text-red-600 transition duration-300" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohammadusman01/" class="text-gray-500 hover:text-blue-700 transition duration-300" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/MohammadUsman0/" class="text-gray-500 hover:text-gray-900 transition duration-300" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repositories">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="data/usman-bio.txt" class="text-sm text-gray-500 hover:text-blue-600 self-center hidden md:inline">Bio</a>
                 </div>
             </div>
         </section>
 
-        <section class="mb-12 bg-white p-8 rounded-xl shadow-lg">
-            <h2 class="heading">Research Interests</h2>
-            <p class="mb-6">
-                My current research interests lie at the intersection of Computer Vision, Deep Learning, and Image Processing. I am particularly focused on developing robust and interpretable AI models for complex biological and medical data.
+        <section id="research" class="mb-16 bg-white p-10 rounded-2xl shadow-xl">
+            <h2 class="heading">Research Interests & Mentorship</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                My current research interests lie at the intersection of **Computer Vision**, **Deep Learning**, and **Image Processing**. I am particularly focused on developing robust and interpretable **AI models for complex biological and medical data**, pushing the boundaries of machine intelligence in healthcare.
             </p>
 
-            <h3 class="text-xl font-semibold mb-4">Supervisors:</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="flex items-start space-x-4">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Supervisors:</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                <article class="flex items-center space-x-6 border border-gray-100 p-4 rounded-xl hover:shadow-lg transition duration-300">
                     <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden shadow-md">
-                        <img src="images/Petia_c.png" alt="Professor Petia Radeva" class="w-full h-full object-cover rounded-full">
+                        <img src="images/Petia_c.png" alt="Professor Petia Radeva profile photo" class="w-full h-full object-cover">
                     </div>
                     <div>
-                        <p class="font-medium text-lg mb-1">Professor <a href="https://scholar.google.com/citations?user=p_MCjd4AAAAJ&hl=en" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Petia Radeva</a></p>
+                        <p class="font-bold text-xl mb-1 text-gray-900">
+                            <a href="https://scholar.google.com/citations?user=p_MCjd4AAAAJ&hl=en" class="text-blue-700 hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">
+                                Professor Petia Radeva
+                            </a>
+                        </p>
                         <p class="text-sm text-gray-600">
-                            Full Professor at the Universitat de Barcelona (UB), Head of the Consolidated Research Group <a href="https://www.ub.edu/aiba/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Artificial Intelligence and Bio-Medical Applications (AIBA)</a>, and Senior Researcher at <a href="https://www.cvc.uab.es/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Computer Vision Center (CVC)</a>, Barcelona, Spain.
+                            Full Professor, Universitat de Barcelona (UB)
+                        </p>
+                        <p class="text-xs text-gray-500 mt-1">
+                            Head of <a href="https://www.ub.edu/aiba/" class="text-blue-600 hover:underline" target="_blank">AIBA Group</a> & Senior Researcher at <a href="https://www.cvc.uab.es/" class="text-blue-600 hover:underline" target="_blank">CVC</a>.
                         </p>
                     </div>
-                </div>
-                <div class="flex items-start space-x-4">
+                </article>
+                
+                <article class="flex items-center space-x-6 border border-gray-100 p-4 rounded-xl hover:shadow-lg transition duration-300">
                     <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden shadow-md">
-                        <img src="images/Daniel_c.png" alt="Professor Daniel Ortiz Martínez" class="w-full h-full object-cover rounded-full">
+                        <img src="images/Daniel_c.png" alt="Professor Daniel Ortiz Martínez profile photo" class="w-full h-full object-cover">
                     </div>
                     <div>
-                        <p class="font-medium text-lg mb-1">Professor <a href="https://scholar.google.com/citations?user=ov1cMJ0AAAAJ&hl=en" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Daniel Ortiz Martínez</a></p>
+                        <p class="font-bold text-xl mb-1 text-gray-900">
+                            <a href="https://scholar.google.com/citations?user=ov1cMJ0AAAAJ&hl=en" class="text-blue-700 hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">
+                                Professor Daniel Ortiz Martínez
+                            </a>
+                        </p>
                         <p class="text-sm text-gray-600">
-                            Assistant Professor at the Department of Mathematics and Informatics of the Universitat de Barcelona (UB), Barcelona, Spain.
+                            Assistant Professor, Universitat de Barcelona (UB)
+                        </p>
+                        <p class="text-xs text-gray-500 mt-1">
+                            Mathematics and Informatics Department.
                         </p>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section class="mb-12 bg-white p-8 rounded-xl shadow-lg">
+        <section id="publications" class="mb-16 bg-white p-10 rounded-2xl shadow-xl">
             <h2 class="heading">Publications</h2>
-            <p class="text-gray-700">
-                My publications will be listed here as they become available. Please check back soon for updates on my research contributions.
-            </p>
-            <!--
-                Example Publication Entry:
-                Uncomment and fill this block when you have a publication to add.
-                It uses flexbox for layout, with responsive stacking on small screens.
-            -->
-            <!--
-            <div class="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 mt-8 p-4 border border-gray-200 rounded-lg">
-                <div class="flex-shrink-0 w-32 h-auto rounded-md overflow-hidden shadow-sm">
-                    <img src="https://placehold.co/128x96/E0E0E0/333333?text=Paper+Thumb" alt="Publication Thumbnail" class="w-full h-full object-cover">
-                </div>
-                <div class="flex-grow">
-                    <h3 class="text-xl font-semibold text-blue-800 mb-1">
-                        <a href="link-to-paper.pdf" target="_blank" rel="noopener noreferrer">Title of Your Awesome Paper Here</a>
-                    </h3>
-                    <p class="text-gray-700 text-sm mb-2">
-                        <strong>Usman Mohammad</strong>, Co-Author 1, Co-Author 2
-                    </p>
-                    <p class="text-gray-600 text-sm italic mb-2">
-                        <em>Conference/Journal Name</em>, Year
-                        <span class="text-red-600 font-bold ml-2">(Oral Presentation)</span>
-                    </p>
-                    <p class="text-gray-800">
-                        A brief, compelling summary of the paper's key contributions and findings. This section should entice readers to learn more.
-                    </p>
-                    <div class="flex flex-wrap gap-3 mt-3 text-sm">
-                        <a href="link-to-project-page" class="text-blue-600 hover:underline">Project Page</a>
-                        <span class="text-gray-400">|</span>
-                        <a href="link-to-arXiv" class="text-blue-600 hover:underline">arXiv</a>
-                        <span class="text-gray-400">|</span>
-                        <a href="link-to-code" class="text-blue-600 hover:underline">Code</a>
-                    </div>
-                </div>
+            <div class="space-y-6">
+                <p class="text-gray-700">
+                    My publications will be listed here as they become available. Please check back soon or visit my <a href="https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en" class="text-blue-600 hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Google Scholar profile</a> for the most up-to-date list of my research contributions.
+                </p>
             </div>
-            -->
         </section>
 
-        <footer class="text-center text-gray-500 text-sm mt-12">
+        <section id="skills" class="mb-16 bg-white p-10 rounded-2xl shadow-xl">
+            <h2 class="heading">Key Skills & Technologies</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-blue-100 text-blue-800 font-medium rounded-full text-sm shadow-sm">Deep Learning</span>
+                <span class="px-4 py-2 bg-blue-100 text-blue-800 font-medium rounded-full text-sm shadow-sm">Computer Vision</span>
+                <span class="px-4 py-2 bg-green-100 text-green-800 font-medium rounded-full text-sm shadow-sm">Python (TensorFlow/PyTorch)</span>
+                <span class="px-4 py-2 bg-green-100 text-green-800 font-medium rounded-full text-sm shadow-sm">R</span>
+                <span class="px-4 py-2 bg-yellow-100 text-yellow-800 font-medium rounded-full text-sm shadow-sm">Medical Image Analysis</span>
+                <span class="px-4 py-2 bg-yellow-100 text-yellow-800 font-medium rounded-full text-sm shadow-sm">Machine Learning Engineering</span>
+                <span class="px-4 py-2 bg-purple-100 text-purple-800 font-medium rounded-full text-sm shadow-sm">Data Science</span>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
             <p>&copy; 2025 Usman Mohammad. All rights reserved.</p>
-            <p>Last updated: May 2025</p>
+            <p class="mt-1">Last updated: <time datetime="2025-05-01">May 2025</time> | Built with Tailwind CSS.</p>
+            <p class="mt-1">Research profile on <a href="https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en" class="text-blue-600 hover:underline">Google Scholar</a>.</p>
         </footer>
 
     </main>

@@ -3,208 +3,1006 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usman Mohammad | PhD Researcher in Deep Learning, Computer Vision, & AI Applications</title>
-    
-    <meta name="description" content="Official website of Usman Mohammad, PhD Researcher at the University of Barcelona specializing in Deep Learning, Computer Vision, and AI applications in the medical domain. View publications and research interests.">
+    <title>Usman Mohammad | AI Researcher — Deep Learning, Computer Vision, & Medical AI</title>
+
+    <meta name="description" content="Usman Mohammad is an AI Researcher specializing in Deep Learning, Computer Vision, Explainable AI, and Medical AI. PhD Researcher at the University of Barcelona, affiliated with BSC and Hospital Clínic Creatio.">
     <meta name="author" content="Usman Mohammad">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
 
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Usman Mohammad",
-  "jobTitle": "PhD Researcher in Deep Learning, Computer Vision, Medical imaging, Omics and Advanced Therapies",
-  "url": "https://mohammadusman0.github.io/", 
-  "image": "images/usman_profile_pic.png",
-  "worksFor": [
     {
-      "@type": "Organization",
-      "name": "University of Barcelona (UB)",
-      "url": "https://web.ub.edu/en/home"
-    },
-    {
-      "@type": "Organization",
-      "name": "Hospital Clinic Creatio",
-      "description": "Academic Center for the Production and Validation of Advanced Therapies",
-      "url": "https://www.ub.edu/creatio/en/" 
-    },
-    {
-      "@type": "Organization",
-      "name": "Barcelona Supercomputing Center (BSC)",
-      "url": "https://www.bsc.es/" 
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Usman Mohammad",
+      "jobTitle": "AI Researcher — Deep Learning, Computer Vision, Explainable AI, Medical AI",
+      "url": "https://mohammadusman0.github.io/",
+      "image": "images/usman_profile_pic.png",
+      "worksFor": [
+        { "@type": "Organization", "name": "University of Barcelona (UB)", "url": "https://web.ub.edu/en/home" },
+        { "@type": "Organization", "name": "Hospital Clinic Creatio", "url": "https://www.ub.edu/creatio/en/" },
+        { "@type": "Organization", "name": "Barcelona Supercomputing Center (BSC)", "url": "https://www.bsc.es/" }
+      ],
+      "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "COMSATS University Islamabad" },
+        { "@type": "EducationalOrganization", "name": "Islamia University Bahawalpur" }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/mohammadusman01/",
+        "https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en",
+        "https://github.com/MohammadUsman0/"
+      ]
     }
-  ],
-  "alumniOf": [
-    {"@type": "EducationalOrganization", "name": "COMSATS University Islamabad"},
-    {"@type": "EducationalOrganization", "name": "Islamia University Bahawalpur"}
-  ],
-  "sameAs": [
-    "https://www.linkedin.com/in/mohammadusman01/",
-    "https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en",
-    "https://github.com/MohammadUsman0/"
-  ]
-}
-</script>
-    
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth; 
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: #030305; color: #ffffff; }
+
+        ::selection { background: rgba(255,255,255,0.3); color: #fff; }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #030305; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+        .bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
         }
-        .name {
-            font-size: 3rem; 
-            font-weight: 800; 
-            color: #1A202C; 
+
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(24px); filter: blur(8px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
         }
-        .heading {
-            font-size: 2rem; 
-            font-weight: 700; 
-            color: #2D3748; 
-            margin-bottom: 1.5rem; 
-            border-bottom: 3px solid #4299E1; 
-            padding-bottom: 0.5rem; 
+        .reveal { opacity: 0; }
+        .reveal.visible {
+            animation: reveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
         }
+        .reveal.visible.delay-1 { animation-delay: 0.1s; }
+        .reveal.visible.delay-2 { animation-delay: 0.2s; }
+        .reveal.visible.delay-3 { animation-delay: 0.3s; }
+        .reveal.visible.delay-4 { animation-delay: 0.4s; }
+        .reveal.visible.delay-5 { animation-delay: 0.5s; }
+        .reveal.visible.delay-6 { animation-delay: 0.6s; }
+        .reveal.visible.delay-7 { animation-delay: 0.7s; }
+        .reveal.visible.delay-8 { animation-delay: 0.8s; }
+
+        .gradient-border {
+            position: relative;
+            background: rgba(10, 10, 12, 0.75);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02), rgba(255,255,255,0.08));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .glow-line {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.15), rgba(255,255,255,0.05), transparent);
+        }
+
+        .profile-ring { position: relative; }
+        .profile-ring::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, #3b82f6, #8b5cf6, #6366f1, #3b82f6);
+            opacity: 0.6;
+            filter: blur(8px);
+            z-index: -1;
+            animation: ring-rotate 6s linear infinite;
+        }
+        @keyframes ring-rotate {
+            to { filter: blur(8px) hue-rotate(360deg); }
+        }
+
+        .pulse-dot {
+            width: 8px; height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+        }
+        .pulse-dot::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse-ring 2s ease-out infinite;
+        }
+        @keyframes pulse-ring {
+            0% { opacity: 0.6; transform: scale(1); }
+            100% { opacity: 0; transform: scale(2.5); }
+        }
+
+        .skill-tag { transition: all 0.3s ease; }
+        .skill-tag:hover {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-3px); }
+
+        .particle {
+            position: absolute;
+            width: 2px; height: 2px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            animation: float-up linear infinite;
+        }
+        @keyframes float-up {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-400px) translateX(30px); opacity: 0; }
+        }
+
+        .mentor-card { transition: all 0.3s ease; }
+        .mentor-card:hover {
+            background: rgba(255,255,255,0.04);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .section-heading { position: relative; display: inline-block; }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(to right, #6366f1, #3b82f6);
+            border-radius: 2px;
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(3, 3, 5, 0.8);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-accent {
+            background: linear-gradient(135deg, #818cf8 0%, #3b82f6 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .research-card { transition: all 0.3s ease; }
+        .research-card:hover {
+            background: rgba(255,255,255,0.04);
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+        .research-card:hover .research-icon {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 8px currentColor);
+        }
+        .research-icon { transition: all 0.3s ease; }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .mobile-menu.open { max-height: 400px; }
+
+        /* ===== PROJECT CARD VISUALS ===== */
+
+        @keyframes cell-orbit {
+            0% { transform: rotate(0deg) translateX(var(--orbit-r)) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(var(--orbit-r)) rotate(-360deg); }
+        }
+        .cell-dot {
+            position: absolute;
+            border-radius: 50%;
+            animation: cell-orbit var(--orbit-dur) linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes circuit-pulse {
+            0% { stroke-dashoffset: 200; opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { stroke-dashoffset: 0; opacity: 0.3; }
+        }
+        .circuit-line {
+            stroke-dasharray: 200;
+            animation: circuit-pulse var(--pulse-dur, 3s) linear infinite;
+            animation-delay: var(--pulse-delay, 0s);
+        }
+
+        @keyframes vcell-glow {
+            0%, 100% { opacity: 0.3; filter: blur(2px); }
+            50% { opacity: 0.8; filter: blur(4px); }
+        }
+        @keyframes vcell-orbit {
+            0% { transform: rotate(0deg) translateX(var(--v-orbit, 40px)) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(var(--v-orbit, 40px)) rotate(-360deg); }
+        }
+        .vcell-particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: vcell-orbit var(--v-dur, 6s) linear infinite;
+        }
+
+        @keyframes attention-pulse {
+            0%, 100% { opacity: 0.4; r: 12; }
+            50% { opacity: 0.75; r: 16; }
+        }
+        @keyframes attention-pulse-sm {
+            0%, 100% { opacity: 0.3; r: 8; }
+            50% { opacity: 0.6; r: 11; }
+        }
+        .attention-blob { animation: attention-pulse 3s ease-in-out infinite; }
+        .attention-blob-sm { animation: attention-pulse-sm 2.5s ease-in-out infinite; }
+
+        @keyframes scan-sweep {
+            0% { transform: translateY(-80px); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(80px); opacity: 0; }
+        }
+        .scan-line { animation: scan-sweep 4s ease-in-out infinite; }
+
+        .project-card { transition: all 0.4s ease; }
+        .project-card:hover {
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-4px);
+        }
+        .project-card:hover .project-visual { opacity: 1; }
+        .project-visual { opacity: 0.6; transition: opacity 0.4s ease; }
+
+        .project-status-active {
+            background: #10b981;
+            box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+        }
+        .project-status-completed {
+            background: #6366f1;
+            box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Initials avatar gradients */
+        .avatar-gradient-1 { background: linear-gradient(135deg, #6366f1, #3b82f6); }
+        .avatar-gradient-2 { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
+        .avatar-gradient-3 { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
+        .avatar-gradient-4 { background: linear-gradient(135deg, #06b6d4, #10b981); }
+        .avatar-gradient-5 { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+        .avatar-gradient-6 { background: linear-gradient(135deg, #14b8a6, #0ea5e9); }
     </style>
-    
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
 </head>
 
-<body class="bg-gray-50 text-gray-800 leading-relaxed antialiased">
-    
-    <nav class="sticky top-0 z-50 bg-white shadow-md" aria-label="Main Navigation">
-        <div class="container mx-auto max-w-4xl px-4 py-3 flex justify-between items-center">
-            <a href="#top" class="text-xl font-bold text-blue-600 hover:text-blue-800">U. Mohammad</a>
-            <div class="space-x-4">
-                <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium hidden sm:inline">About</a>
-                <a href="#research" class="text-gray-600 hover:text-blue-600 font-medium hidden sm:inline">Research</a>
-                <a href="#publications" class="text-gray-600 hover:text-blue-600 font-medium hidden sm:inline">Publications</a>
-                <a href="data/Usman CV.pdf" class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out" download>
-                    <i class="fas fa-download mr-2"></i>Download CV
+<body class="antialiased overflow-x-hidden">
+
+    <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
+    <div class="fixed top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-0 right-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#top" class="flex items-center gap-2 group">
+                <div class="w-7 h-7 rounded-md bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center text-white text-xs font-bold">U</div>
+                <span class="text-white font-semibold text-sm tracking-wide hidden sm:inline">Usman Mohammad</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-white/50 hover:text-white text-sm font-medium transition-colors duration-200">About</a>
+                <a href="#research" class="text-white/50 hover:text-white text-sm font-medium transition-colors duration-200">Research</a>
+                <a href="#projects" class="text-white/50 hover:text-white text-sm font-medium transition-colors duration-200">Projects</a>
+                <a href="#mentors" class="text-white/50 hover:text-white text-sm font-medium transition-colors duration-200">Mentors</a>
+                <a href="#publications" class="text-white/50 hover:text-white text-sm font-medium transition-colors duration-200">Publications</a>
+                <a href="data/Usman CV.pdf" download class="ml-2 px-5 py-2 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all duration-200 flex items-center gap-2">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>CV
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-white/70 hover:text-white transition-colors" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-5 h-5"></i>
+            </button>
+        </div>
+        <div class="mobile-menu md:hidden border-t border-white/5" id="mobile-menu">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#about" class="block text-white/50 hover:text-white text-sm font-medium py-2 transition-colors">About</a>
+                <a href="#research" class="block text-white/50 hover:text-white text-sm font-medium py-2 transition-colors">Research</a>
+                <a href="#projects" class="block text-white/50 hover:text-white text-sm font-medium py-2 transition-colors">Projects</a>
+                <a href="#mentors" class="block text-white/50 hover:text-white text-sm font-medium py-2 transition-colors">Mentors</a>
+                <a href="#publications" class="block text-white/50 hover:text-white text-sm font-medium py-2 transition-colors">Publications</a>
+                <a href="#skills" class="block text-white/50 hover:text-white text-sm font-medium py-2 transition-colors">Skills</a>
+                <a href="data/Usman CV.pdf" download class="inline-flex items-center gap-2 px-5 py-2 bg-white text-black text-sm font-medium rounded-full mt-2">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>Download CV
                 </a>
             </div>
         </div>
     </nav>
 
-    <main class="container mx-auto px-4 py-12 max-w-4xl" id="top">
+    <main class="relative z-10" id="top">
 
-        <section id="about" class="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10 mb-16 bg-white p-10 rounded-2xl shadow-xl border-t-4 border-blue-600">
-            <div class="flex-shrink-0 w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-2xl border-4 border-gray-100">
-                <img src="images/usman_profile_pic.png" alt="Headshot of Usman Mohammad, PhD Researcher specializing in Deep Learning at the University of Barcelona." class="w-full h-full object-cover">
-            </div>
-            <div class="text-center md:text-left">
-                <h1 class="name mb-3">Usman Mohammad</h1>
-                <p class="text-xl font-medium text-blue-600 mb-6">
-                    PhD Researcher in Deep Learning & Computer Vision
-                </p>
-                <p class="text-lg mb-6 text-gray-700">
-                    I am a predoctoral researcher at the <a href="https://mat.ub.edu/en/" class="text-blue-600 hover:underline font-semibold">Mathematics and Computer Sciences Department</a> of the
-                    <a href="https://www.ub.edu/web/portal/en/" class="text-blue-600 hover:underline font-semibold">University of Barcelona</a>, specializing in <strong>Deep Learning</strong> and <strong>Computer Vision</strong> in Barcelona, Spain. My research focuses on leveraging advanced AI techniques to solve complex problems at the intersection of these fields.
-                </p>
-                <p class="mb-8 text-gray-700">
-                    With a strong background as a Machine Learning Engineer, I have a demonstrated history of working in AI within the medical domain. My expertise includes Python, R, and related technologies. I hold an Honours Master's degree in Computer Science from COMSATS University Islamabad (2021) and a BSCS from Islamia University Bahawalpur (2018).
-                </p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-6 text-2xl">
-                    <a href="mailto:sci.ch.usman.shams@gmail.com" class="text-gray-500 hover:text-blue-600 transition duration-300" aria-label="Email Usman Mohammad">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en" class="text-gray-500 hover:text-red-600 transition duration-300" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mohammadusman01/" class="text-gray-500 hover:text-blue-700 transition duration-300" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/MohammadUsman0/" class="text-gray-500 hover:text-gray-900 transition duration-300" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repositories">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="data/usman-bio.txt" class="text-sm text-gray-500 hover:text-blue-600 self-center hidden md:inline">Bio</a>
+        <!-- ==================== HERO ==================== -->
+        <section id="about" class="min-h-screen flex items-center justify-center pt-20 pb-16">
+            <div class="max-w-6xl mx-auto px-6 w-full">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                    <div class="reveal delay-1 flex-shrink-0">
+                        <div class="profile-ring w-56 h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden">
+                            <img src="images/usman_profile_pic.png" alt="Usman Mohammad, AI Researcher" class="w-full h-full object-cover rounded-full">
+                        </div>
+                    </div>
+                    <div class="text-center lg:text-left max-w-2xl">
+                        <div class="reveal delay-2 flex items-center justify-center lg:justify-start gap-2 mb-5">
+                            <span class="pulse-dot"></span>
+                            <span class="text-emerald-400 text-sm font-medium tracking-wide">Open to collaborations</span>
+                        </div>
+                        <h1 class="reveal delay-2 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-4">
+                            <span class="text-gradient">Usman Mohammad</span>
+                        </h1>
+                        <p class="reveal delay-3 text-xl lg:text-2xl font-medium text-gradient-accent mb-6">AI Researcher</p>
+                        <p class="reveal delay-4 text-base lg:text-lg text-white/60 leading-relaxed mb-4">
+                            I develop AI methods at the intersection of <strong class="text-white/80">Deep Learning</strong>, <strong class="text-white/80">Computer Vision</strong>, and <strong class="text-white/80">Computational Biology</strong>. My work spans single-cell analysis, medical imaging, and virtual cell modeling — building models that are not only powerful but also <strong class="text-white/80">interpretable</strong>.
+                        </p>
+                        <p class="reveal delay-5 text-base text-white/50 leading-relaxed mb-8">
+                            PhD Researcher at the
+                            <a href="https://mat.ub.edu/en/" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 decoration-indigo-400/40 hover:decoration-indigo-300 transition-colors font-medium">Mathematics & Computer Sciences Department</a>,
+                            <a href="https://www.ub.edu/web/portal/en/" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 decoration-indigo-400/40 hover:decoration-indigo-300 transition-colors font-medium">University of Barcelona</a>.
+                            Affiliated with <a href="https://www.ub.edu/creatio/" class="text-white/60 hover:text-white/80 underline underline-offset-2 transition-colors">Hospital Clínic Creatio</a> and the <a href="https://www.bsc.es/discover-bsc/organisation/scientific-structure/life-sciences/computational-biology" class="text-white/60 hover:text-white/80 underline underline-offset-2 transition-colors">Computational Biology group at BSC</a>.
+                            Previously an ML Engineer in the medical domain. Honours Master's from <strong class="text-white/70">COMSATS University Islamabad</strong>.
+                        </p>
+                        <div class="reveal delay-6 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                            <a href="mailto:sci.ch.usman.shams@gmail.com" class="social-icon flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/10 hover:border-white/25 hover:bg-white/5 text-white/60 hover:text-white text-sm font-medium transition-all" aria-label="Email">
+                                <i data-lucide="mail" class="w-4 h-4"></i>Email
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en" class="social-icon flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/10 hover:border-white/25 hover:bg-white/5 text-white/60 hover:text-white text-sm font-medium transition-all" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                                <i class="fas fa-graduation-cap text-sm"></i>Scholar
+                            </a>
+                            <a href="https://www.linkedin.com/in/mohammadusman01/" class="social-icon flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/10 hover:border-white/25 hover:bg-white/5 text-white/60 hover:text-white text-sm font-medium transition-all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i data-lucide="linkedin" class="w-4 h-4"></i>LinkedIn
+                            </a>
+                            <a href="https://github.com/MohammadUsman0/" class="social-icon flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/10 hover:border-white/25 hover:bg-white/5 text-white/60 hover:text-white text-sm font-medium transition-all" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i data-lucide="github" class="w-4 h-4"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="research" class="mb-16 bg-white p-10 rounded-2xl shadow-xl">
-            <h2 class="heading">Research Interests & Mentorship</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                My current research interests lie at the intersection of Computer Vision, Deep Learning, and Image Processing. I am particularly focused on developing robust and interpretable AI models for complex biological and medical data, pushing the boundaries of machine intelligence in healthcare.
-            </p>
+        <div class="glow-line max-w-4xl mx-auto"></div>
 
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">Supervisors:</h3>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                
-                <article class="flex items-center space-x-6 border border-gray-100 p-4 rounded-xl hover:shadow-lg transition duration-300">
-                    <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden shadow-md">
-                        <img src="images/Petia_c.png" alt="Professor Petia Radeva profile photo" class="w-full h-full object-cover">
+        <!-- ==================== RESEARCH ==================== -->
+        <section id="research" class="py-24 lg:py-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="reveal mb-16 text-center">
+                    <p class="text-xs font-medium tracking-[0.2em] uppercase text-indigo-400 mb-3">Research</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight section-heading text-gradient">Research Interests</h2>
+                    <p class="mt-8 text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
+                        Developing robust and interpretable AI for complex biological and medical data — from single-cell omics to virtual cell modeling.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="reveal delay-1 research-card gradient-border p-6 rounded-2xl border border-white/5">
+                        <div class="research-icon text-indigo-400 mb-4"><i data-lucide="eye" class="w-8 h-8"></i></div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Computer Vision</h3>
+                        <p class="text-sm text-white/50 leading-relaxed">Object detection, segmentation, and scene understanding in medical and biological imagery.</p>
                     </div>
-                    <div>
-                        <p class="font-bold text-xl mb-1 text-gray-900">
-                            <a href="https://scholar.google.com/citations?user=p_MCjd4AAAAJ&hl=en" class="text-blue-700 hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">
-                                Professor Petia Radeva
-                            </a>
-                        </p>
-                        <p class="text-sm text-gray-600">
-                            Full Professor, Universitat de Barcelona (UB)
-                        </p>
-                        <p class="text-xs text-gray-500 mt-1">
-                            Head of <a href="https://www.ub.edu/aiba/" class="text-blue-600 hover:underline" target="_blank">AIBA Group</a> & Senior Researcher at <a href="https://www.cvc.uab.es/" class="text-blue-600 hover:underline" target="_blank">CVC</a>.
-                        </p>
+                    <div class="reveal delay-2 research-card gradient-border p-6 rounded-2xl border border-white/5">
+                        <div class="research-icon text-blue-400 mb-4"><i data-lucide="brain" class="w-8 h-8"></i></div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Deep Learning</h3>
+                        <p class="text-sm text-white/50 leading-relaxed">Novel architectures and training strategies for robust representation learning.</p>
                     </div>
-                </article>
-                
-                <article class="flex items-center space-x-6 border border-gray-100 p-4 rounded-xl hover:shadow-lg transition duration-300">
-                    <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden shadow-md">
-                        <img src="images/Daniel_c.png" alt="Professor Daniel Ortiz Martínez profile photo" class="w-full h-full object-cover">
+                    <div class="reveal delay-3 research-card gradient-border p-6 rounded-2xl border border-white/5">
+                        <div class="research-icon text-cyan-400 mb-4"><i data-lucide="scan-line" class="w-8 h-8"></i></div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Medical Imaging</h3>
+                        <p class="text-sm text-white/50 leading-relaxed">AI-driven analysis for diagnosis, treatment planning, and advanced therapies.</p>
                     </div>
-                    <div>
-                        <p class="font-bold text-xl mb-1 text-gray-900">
-                            <a href="https://scholar.google.com/citations?user=ov1cMJ0AAAAJ&hl=en" class="text-blue-700 hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">
-                                Professor Daniel Ortiz Martínez
-                            </a>
-                        </p>
-                        <p class="text-sm text-gray-600">
-                            Assistant Professor, Universitat de Barcelona (UB)
-                        </p>
-                        <p class="text-xs text-gray-500 mt-1">
-                            Mathematics and Informatics Department.
-                        </p>
+                    <div class="reveal delay-4 research-card gradient-border p-6 rounded-2xl border border-white/5">
+                        <div class="research-icon text-emerald-400 mb-4"><i data-lucide="dna" class="w-8 h-8"></i></div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Single-Cell & Omics</h3>
+                        <p class="text-sm text-white/50 leading-relaxed">AI methods for single-cell data analysis to understand disease at the cellular level.</p>
                     </div>
-                </article>
+                    <div class="reveal delay-5 research-card gradient-border p-6 rounded-2xl border border-white/5">
+                        <div class="research-icon text-amber-400 mb-4"><i data-lucide="cpu" class="w-8 h-8"></i></div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Foundation Models</h3>
+                        <p class="text-sm text-white/50 leading-relaxed">Large-scale pretraining and transfer learning for biological and medical applications.</p>
+                    </div>
+                    <div class="reveal delay-6 research-card gradient-border p-6 rounded-2xl border border-white/5">
+                        <div class="research-icon text-rose-400 mb-4"><i data-lucide="atom" class="w-8 h-8"></i></div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Virtual Cell Modeling</h3>
+                        <p class="text-sm text-white/50 leading-relaxed">Deep learning approaches to simulate and predict cellular behavior and disease mechanisms.</p>
+                    </div>
+                    <div class="reveal delay-7 research-card gradient-border p-6 rounded-2xl border border-white/5 sm:col-span-2 lg:col-span-1">
+                        <div class="research-icon text-orange-400 mb-4"><i data-lucide="layers" class="w-8 h-8"></i></div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Explainable AI & Interpretability</h3>
+                        <p class="text-sm text-white/50 leading-relaxed">Mechanistic interpretability and XAI methods to understand what deep models learn — essential for trustworthy medical AI.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="publications" class="mb-16 bg-white p-10 rounded-2xl shadow-xl">
-            <h2 class="heading">Publications</h2>
-            <div class="space-y-6">
-                <p class="text-gray-700">
-                    My publications will be listed here as they become available. Please check back soon or visit my <a href="https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en" class="text-blue-600 hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Google Scholar profile</a> for the most up-to-date list of my research contributions.
-                </p>
+        <div class="glow-line max-w-4xl mx-auto"></div>
+
+        <!-- ==================== PROJECTS (Descending: Most Recent First) ==================== -->
+        <section id="projects" class="py-24 lg:py-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="reveal mb-16 text-center">
+                    <p class="text-xs font-medium tracking-[0.2em] uppercase text-indigo-400 mb-3">Projects</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight section-heading text-gradient">Selected Projects</h2>
+                    <p class="mt-8 text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
+                        Applying AI to fundamental problems in neurodegeneration, alternative disease modeling, and computational biology.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+
+                    <!-- ===== 1. Virtual Cell @ BSC (Active — Most Recent) ===== -->
+                    <div class="reveal delay-1 project-card gradient-border rounded-2xl border border-white/5 overflow-hidden">
+                        <div class="flex flex-col lg:flex-row">
+                            <div class="project-visual relative w-full lg:w-72 h-48 lg:h-auto flex-shrink-0 overflow-hidden bg-gradient-to-br from-violet-950/40 to-purple-950/30 flex items-center justify-center">
+                                <div class="relative w-40 h-40">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-violet-500/15 blur-md" style="animation: vcell-glow 3s ease-in-out infinite;"></div>
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-2 border-violet-400/30"></div>
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-violet-400/50"></div>
+                                    <div class="vcell-particle w-2.5 h-2.5 bg-blue-400/60" style="top:50%;left:50%;--v-orbit:35px;--v-dur:5s;"></div>
+                                    <div class="vcell-particle w-2 h-2 bg-cyan-400/50" style="top:50%;left:50%;--v-orbit:50px;--v-dur:8s;"></div>
+                                    <div class="vcell-particle w-1.5 h-1.5 bg-indigo-400/40" style="top:50%;left:50%;--v-orbit:25px;--v-dur:4s;"></div>
+                                    <div class="vcell-particle w-2 h-2 bg-purple-400/50" style="top:50%;left:50%;--v-orbit:60px;--v-dur:12s;"></div>
+                                    <div class="vcell-particle w-1.5 h-1.5 bg-rose-400/30" style="top:50%;left:50%;--v-orbit:45px;--v-dur:7s;"></div>
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70px] h-[70px] rounded-full border border-violet-400/10 rotate-45"></div>
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full border border-blue-400/8 -rotate-12"></div>
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full border border-cyan-400/5 rotate-30"></div>
+                                </div>
+                                <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-md bg-violet-500/15 border border-violet-400/20 text-violet-300 text-[10px] font-semibold tracking-wider uppercase">Foundation Model</div>
+                            </div>
+                            <div class="p-6 lg:p-8 flex-1">
+                                <div class="flex items-center gap-3 mb-3 flex-wrap">
+                                    <span class="project-status-active w-2 h-2 rounded-full"></span>
+                                    <span class="text-xs font-medium text-emerald-300/80 tracking-wide">Active</span>
+                                    <span class="text-white/20">·</span>
+                                    <span class="text-xs text-white/40">Ongoing</span>
+                                    <span class="text-white/20">·</span>
+                                    <span class="text-xs text-white/40">BSC Computational Biology</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2 tracking-tight">Virtual Cell Modeling</h3>
+                                <p class="text-sm text-white/50 mb-4 leading-relaxed">
+                                    <strong class="text-white/70">Deep learning for virtual cell simulation and prediction.</strong> Building foundation models to simulate cellular behavior, predict disease mechanisms, and accelerate discovery in computational biology — working towards AI that can model the complexity of living cells.
+                                </p>
+                                <div class="flex flex-wrap items-center gap-3 text-xs">
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Foundation Models</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Virtual Cell</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Computational Biology</span>
+                                    <a href="https://www.bsc.es/discover-bsc/organisation/scientific-structure/life-sciences/computational-biology" class="px-2.5 py-1 rounded-md bg-violet-500/10 text-violet-400/80 border border-violet-400/15 hover:bg-violet-500/20 transition-colors" target="_blank" rel="noopener noreferrer">BSC ↗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== 2. AlterNED (2022–2025) ===== -->
+                    <div class="reveal delay-2 project-card gradient-border rounded-2xl border border-white/5 overflow-hidden">
+                        <div class="flex flex-col lg:flex-row">
+                            <div class="project-visual relative w-full lg:w-72 h-48 lg:h-auto flex-shrink-0 overflow-hidden bg-gradient-to-br from-emerald-950/40 to-cyan-950/30 flex items-center justify-center">
+                                <svg viewBox="0 0 160 160" class="w-40 h-40" fill="none">
+                                    <circle cx="40" cy="40" r="3" fill="#34d399" opacity="0.6"/>
+                                    <circle cx="80" cy="30" r="4" fill="#34d399" opacity="0.8"/>
+                                    <circle cx="120" cy="45" r="3" fill="#34d399" opacity="0.5"/>
+                                    <circle cx="30" cy="80" r="3.5" fill="#06b6d4" opacity="0.7"/>
+                                    <circle cx="80" cy="80" r="6" fill="#34d399" opacity="0.9"/>
+                                    <circle cx="130" cy="80" r="3" fill="#06b6d4" opacity="0.5"/>
+                                    <circle cx="45" cy="120" r="3" fill="#34d399" opacity="0.6"/>
+                                    <circle cx="80" cy="130" r="4" fill="#06b6d4" opacity="0.7"/>
+                                    <circle cx="120" cy="115" r="3.5" fill="#34d399" opacity="0.5"/>
+                                    <line x1="40" y1="40" x2="80" y2="30" stroke="#34d399" stroke-width="1" class="circuit-line" style="--pulse-dur:2.5s;--pulse-delay:0s;"/>
+                                    <line x1="80" y1="30" x2="120" y2="45" stroke="#06b6d4" stroke-width="1" class="circuit-line" style="--pulse-dur:3s;--pulse-delay:0.5s;"/>
+                                    <line x1="30" y1="80" x2="80" y2="80" stroke="#34d399" stroke-width="1.5" class="circuit-line" style="--pulse-dur:2s;--pulse-delay:0.3s;"/>
+                                    <line x1="80" y1="80" x2="130" y2="80" stroke="#06b6d4" stroke-width="1" class="circuit-line" style="--pulse-dur:2.8s;--pulse-delay:0.8s;"/>
+                                    <line x1="45" y1="120" x2="80" y2="130" stroke="#34d399" stroke-width="1" class="circuit-line" style="--pulse-dur:3.2s;--pulse-delay:0.2s;"/>
+                                    <line x1="80" y1="130" x2="120" y2="115" stroke="#06b6d4" stroke-width="1" class="circuit-line" style="--pulse-dur:2.6s;--pulse-delay:1s;"/>
+                                    <line x1="80" y1="30" x2="80" y2="80" stroke="#34d399" stroke-width="1.5" class="circuit-line" style="--pulse-dur:2.2s;--pulse-delay:0.6s;"/>
+                                    <line x1="80" y1="80" x2="80" y2="130" stroke="#06b6d4" stroke-width="1" class="circuit-line" style="--pulse-dur:3.5s;--pulse-delay:0.4s;"/>
+                                    <line x1="40" y1="40" x2="30" y2="80" stroke="#34d399" stroke-width="0.8" class="circuit-line" style="--pulse-dur:3.8s;--pulse-delay:1.2s;"/>
+                                    <line x1="120" y1="45" x2="130" y2="80" stroke="#06b6d4" stroke-width="0.8" class="circuit-line" style="--pulse-dur:3.3s;--pulse-delay:0.7s;"/>
+                                </svg>
+                                <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-md bg-emerald-500/15 border border-emerald-400/20 text-emerald-300 text-[10px] font-semibold tracking-wider uppercase">Brain-on-Chip</div>
+                            </div>
+                            <div class="p-6 lg:p-8 flex-1">
+                                <div class="flex items-center gap-3 mb-3 flex-wrap">
+                                    <span class="project-status-completed w-2 h-2 rounded-full"></span>
+                                    <span class="text-xs font-medium text-indigo-300/80 tracking-wide">Completed</span>
+                                    <span class="text-white/20">·</span>
+                                    <span class="text-xs text-white/40">2022 – 2025</span>
+                                    <span class="text-white/20">·</span>
+                                    <span class="text-xs text-white/40">Ministry of Science and Innovation</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2 tracking-tight">AlterNED</h3>
+                                <p class="text-sm text-white/50 mb-4 leading-relaxed">
+                                    <strong class="text-white/70">Alternative human in vitro methods to study neurodegenerative diseases.</strong> Developing brain-on-chip platforms as alternative models for neurodegeneration research, reducing reliance on animal models while enabling more precise study of disease mechanisms.
+                                </p>
+                                <div class="flex flex-wrap items-center gap-3 text-xs">
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Neurodegeneration</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Brain-on-Chip</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">In Vitro Models</span>
+                                    <a href="https://www.ub.edu/creatio/qui-som/#projectes" class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400/80 border border-emerald-400/15 hover:bg-emerald-500/20 transition-colors" target="_blank" rel="noopener noreferrer">Creatio ↗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== 3. HDREP (2021–2024) ===== -->
+                    <div class="reveal delay-3 project-card gradient-border rounded-2xl border border-white/5 overflow-hidden">
+                        <div class="flex flex-col lg:flex-row">
+                            <div class="project-visual relative w-full lg:w-72 h-48 lg:h-auto flex-shrink-0 overflow-hidden bg-gradient-to-br from-indigo-950/60 to-blue-950/40 flex items-center justify-center">
+                                <div class="relative w-40 h-40">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-indigo-500/40 blur-sm"></div>
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-indigo-400"></div>
+                                    <div class="cell-dot w-3 h-3 bg-blue-400/70" style="top:50%;left:50%;--orbit-r:25px;--orbit-dur:8s;"></div>
+                                    <div class="cell-dot w-2 h-2 bg-cyan-400/60" style="top:50%;left:50%;--orbit-r:40px;--orbit-dur:12s;"></div>
+                                    <div class="cell-dot w-2.5 h-2.5 bg-indigo-400/60" style="top:50%;left:50%;--orbit-r:55px;--orbit-dur:16s;"></div>
+                                    <div class="cell-dot w-2 h-2 bg-purple-400/50" style="top:50%;left:50%;--orbit-r:35px;--orbit-dur:10s;"></div>
+                                    <div class="cell-dot w-1.5 h-1.5 bg-blue-300/50" style="top:50%;left:50%;--orbit-r:60px;--orbit-dur:20s;"></div>
+                                    <div class="cell-dot w-2 h-2 bg-teal-400/50" style="top:50%;left:50%;--orbit-r:48px;--orbit-dur:14s;"></div>
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border border-indigo-400/10"></div>
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border border-blue-400/10"></div>
+                                </div>
+                                <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-md bg-indigo-500/15 border border-indigo-400/20 text-indigo-300 text-[10px] font-semibold tracking-wider uppercase">Single-Cell</div>
+                            </div>
+                            <div class="p-6 lg:p-8 flex-1">
+                                <div class="flex items-center gap-3 mb-3 flex-wrap">
+                                    <span class="project-status-completed w-2 h-2 rounded-full"></span>
+                                    <span class="text-xs font-medium text-indigo-300/80 tracking-wide">Completed</span>
+                                    <span class="text-white/20">·</span>
+                                    <span class="text-xs text-white/40">2021 – 2024</span>
+                                    <span class="text-white/20">·</span>
+                                    <span class="text-xs text-white/40">"La Caixa" Foundation</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2 tracking-tight">HDREP</h3>
+                                <p class="text-sm text-white/50 mb-4 leading-relaxed">
+                                    <strong class="text-white/70">In vivo reprogramming to rescue alterations in Huntington's disease.</strong> Developed AI methods for single-cell data analysis to understand disease development and progression at the cellular level, enabling identification of key molecular signatures in Huntington's disease models.
+                                </p>
+                                <div class="flex flex-wrap items-center gap-3 text-xs">
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Huntington's Disease</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Single-Cell Analysis</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">In Vivo Reprogramming</span>
+                                    <a href="https://www.ub.edu/creatio/qui-som/#projectes" class="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400/80 border border-indigo-400/15 hover:bg-indigo-500/20 transition-colors" target="_blank" rel="noopener noreferrer">Creatio ↗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== 4. ViT Chest X-ray (Master's — Earliest) ===== -->
+                    <div class="reveal delay-4 project-card gradient-border rounded-2xl border border-white/5 overflow-hidden">
+                        <div class="flex flex-col lg:flex-row">
+                            <div class="project-visual relative w-full lg:w-72 h-48 lg:h-auto flex-shrink-0 overflow-hidden bg-gradient-to-br from-amber-950/30 to-orange-950/20 flex items-center justify-center">
+                                <svg viewBox="0 0 160 160" class="w-40 h-40" fill="none">
+                                    <ellipse cx="80" cy="72" rx="42" ry="52" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" fill="none"/>
+                                    <line x1="80" y1="25" x2="80" y2="125" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+                                    <path d="M80 42 Q58 38 38 52" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
+                                    <path d="M80 56 Q52 52 34 66" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
+                                    <path d="M80 70 Q50 68 30 82" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
+                                    <path d="M80 84 Q54 82 38 96" stroke="rgba(255,255,255,0.04)" stroke-width="1" fill="none"/>
+                                    <path d="M80 42 Q102 38 122 52" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
+                                    <path d="M80 56 Q108 52 126 66" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
+                                    <path d="M80 70 Q110 68 130 82" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
+                                    <path d="M80 84 Q106 82 122 96" stroke="rgba(255,255,255,0.04)" stroke-width="1" fill="none"/>
+                                    <ellipse cx="60" cy="68" rx="18" ry="28" stroke="rgba(255,255,255,0.04)" stroke-width="0.8" fill="none"/>
+                                    <ellipse cx="100" cy="68" rx="18" ry="28" stroke="rgba(255,255,255,0.04)" stroke-width="0.8" fill="none"/>
+                                    <circle cx="58" cy="65" r="12" fill="rgba(239,68,68,0.2)" class="attention-blob" style="animation-delay: 0s;"/>
+                                    <circle cx="102" cy="65" r="12" fill="rgba(239,68,68,0.15)" class="attention-blob" style="animation-delay: 0.5s;"/>
+                                    <circle cx="80" cy="48" r="8" fill="rgba(251,191,36,0.15)" class="attention-blob-sm" style="animation-delay: 1s;"/>
+                                    <circle cx="65" cy="85" r="8" fill="rgba(251,191,36,0.12)" class="attention-blob-sm" style="animation-delay: 1.5s;"/>
+                                    <circle cx="95" cy="85" r="8" fill="rgba(251,191,36,0.12)" class="attention-blob-sm" style="animation-delay: 2s;"/>
+                                    <line x1="30" y1="72" x2="130" y2="72" stroke="rgba(251,191,36,0.3)" stroke-width="1" class="scan-line"/>
+                                </svg>
+                                <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-md bg-amber-500/15 border border-amber-400/20 text-amber-300 text-[10px] font-semibold tracking-wider uppercase">Vision Transformer</div>
+                            </div>
+                            <div class="p-6 lg:p-8 flex-1">
+                                <div class="flex items-center gap-3 mb-3 flex-wrap">
+                                    <span class="project-status-completed w-2 h-2 rounded-full"></span>
+                                    <span class="text-xs font-medium text-indigo-300/80 tracking-wide">Completed</span>
+                                    <span class="text-white/20">·</span>
+                                    <span class="text-xs text-white/40">During Master's</span>
+                                    <span class="text-white/20">·</span>
+                                    <span class="text-xs text-white/40">COMSATS University Islamabad</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-2 tracking-tight">Vision Transformers for Chest X-rays</h3>
+                                <p class="text-sm text-white/50 mb-4 leading-relaxed">
+                                    <strong class="text-white/70">Transfer learning with ViT architectures for chest X-ray analysis.</strong> Developed and adapted Vision Transformer models for medical imaging, exploring transfer learning strategies to bridge the domain gap between natural and medical images for pulmonary disease detection.
+                                </p>
+                                <div class="flex flex-wrap items-center gap-3 text-xs">
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Vision Transformers</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Transfer Learning</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Chest X-ray</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">Medical Imaging</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
-        <section id="skills" class="mb-16 bg-white p-10 rounded-2xl shadow-xl">
-            <h2 class="heading">Key Skills & Technologies</h2>
-            <div class="flex flex-wrap gap-3">
-                <span class="px-4 py-2 bg-blue-100 text-blue-800 font-medium rounded-full text-sm shadow-sm">Deep Learning</span>
-                <span class="px-4 py-2 bg-blue-100 text-blue-800 font-medium rounded-full text-sm shadow-sm">Computer Vision</span>
-                <span class="px-4 py-2 bg-green-100 text-green-800 font-medium rounded-full text-sm shadow-sm">Python (TensorFlow/PyTorch)</span>
-                <span class="px-4 py-2 bg-green-100 text-green-800 font-medium rounded-full text-sm shadow-sm">R</span>
-                <span class="px-4 py-2 bg-yellow-100 text-yellow-800 font-medium rounded-full text-sm shadow-sm">Medical Image Analysis</span>
-                <span class="px-4 py-2 bg-yellow-100 text-yellow-800 font-medium rounded-full text-sm shadow-sm">Machine Learning Engineering</span>
-                <span class="px-4 py-2 bg-purple-100 text-purple-800 font-medium rounded-full text-sm shadow-sm">Data Science</span>
+        <div class="glow-line max-w-4xl mx-auto"></div>
+
+        <!-- ==================== MENTORS ==================== -->
+        <section id="mentors" class="py-24 lg:py-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="reveal mb-16 text-center">
+                    <p class="text-xs font-medium tracking-[0.2em] uppercase text-indigo-400 mb-3">Mentors</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight section-heading text-gradient">Mentors & Collaborators</h2>
+                    <p class="mt-8 text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
+                        Guided by exceptional researchers across multiple institutions whose expertise and mentorship shape my work.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+                    <!-- Petia Radeva -->
+                    <article class="reveal delay-1 mentor-card gradient-border p-6 rounded-2xl border border-white/5 flex items-center gap-5">
+                        <div class="flex-shrink-0 w-20 h-20 rounded-full border-2 border-white/10 avatar-gradient-1 flex items-center justify-center text-white text-xl font-bold">
+                            PR
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white text-base mb-1">
+                                <a href="https://scholar.google.com/citations?user=p_MCjd4AAAAJ&hl=en"
+                                   class="hover:text-indigo-400 transition-colors"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Professor Petia Radeva
+                                </a>
+                            </p>
+                            <p class="text-sm text-white/50">Full Professor, Universitat de Barcelona</p>
+                            <p class="text-xs text-white/40 mt-1">
+                                Head of <a href="https://www.ub.edu/aiba/" class="text-indigo-400/70 hover:text-indigo-400 underline underline-offset-2 transition-colors" target="_blank">AIBA Group</a> · Senior Researcher at <a href="https://www.cvc.uab.es/" class="text-indigo-400/70 hover:text-indigo-400 underline underline-offset-2 transition-colors" target="_blank">CVC</a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Daniel Ortiz -->
+                    <article class="reveal delay-2 mentor-card gradient-border p-6 rounded-2xl border border-white/5 flex items-center gap-5">
+                        <div class="flex-shrink-0 w-20 h-20 rounded-full border-2 border-white/10 avatar-gradient-2 flex items-center justify-center text-white text-xl font-bold">
+                            DO
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white text-base mb-1">
+                                <a href="https://scholar.google.com/citations?user=ov1cMJ0AAAAJ&hl=en"
+                                   class="hover:text-indigo-400 transition-colors"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Professor Daniel Ortiz Martínez
+                                </a>
+                            </p>
+                            <p class="text-sm text-white/50">Assistant Professor, Universitat de Barcelona</p>
+                            <p class="text-xs text-white/40 mt-1">Mathematics and Informatics Department</p>
+                        </div>
+                    </article>
+
+                    <!-- Josep M. Canals -->
+                    <article class="reveal delay-3 mentor-card gradient-border p-6 rounded-2xl border border-white/5 flex items-center gap-5">
+                        <div class="flex-shrink-0 w-20 h-20 rounded-full border-2 border-white/10 avatar-gradient-4 flex items-center justify-center text-white text-xl font-bold">
+                            JC
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white text-base mb-1">
+                                <a href="https://www.neurociencies.ub.edu/investigator/josep-m-canals/"
+                                   class="hover:text-indigo-400 transition-colors"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Dr. Josep M. Canals
+                                </a>
+                            </p>
+                            <p class="text-sm text-white/50">Principal Investigator, Universitat de Barcelona</p>
+                            <p class="text-xs text-white/40 mt-1">
+                                <a href="https://www.ub.edu/creatio/" class="text-indigo-400/70 hover:text-indigo-400 underline underline-offset-2 transition-colors" target="_blank">Hospital Clínic Creatio</a> · Neurosciences · HDREP & AlterNED
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Alfonso Valencia -->
+                    <article class="reveal delay-4 mentor-card gradient-border p-6 rounded-2xl border border-white/5 flex items-center gap-5">
+                        <div class="flex-shrink-0 w-20 h-20 rounded-full border-2 border-white/10 avatar-gradient-3 flex items-center justify-center text-white text-xl font-bold">
+                            AV
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white text-base mb-1">
+                                <a href="https://www.bsc.es/valencia-alfonso"
+                                   class="hover:text-indigo-400 transition-colors"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Professor Alfonso Valencia
+                                </a>
+                            </p>
+                            <p class="text-sm text-white/50">ICREA Research Professor, BSC</p>
+                            <p class="text-xs text-white/40 mt-1">
+                                Head of <a href="https://www.bsc.es/discover-bsc/organisation/scientific-structure/life-sciences/computational-biology" class="text-indigo-400/70 hover:text-indigo-400 underline underline-offset-2 transition-colors" target="_blank">Computational Biology Group</a> · BSC Life Sciences
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Jose Carbonell Caballero -->
+                    <article class="reveal delay-5 mentor-card gradient-border p-6 rounded-2xl border border-white/5 flex items-center gap-5">
+                        <div class="flex-shrink-0 w-20 h-20 rounded-full border-2 border-white/10 avatar-gradient-5 flex items-center justify-center text-white text-xl font-bold">
+                            JCC
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white text-base mb-1">
+                                <a href="https://www.bsc.es/carbonell-caballero-jose"
+                                   class="hover:text-indigo-400 transition-colors"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Dr. Jose Carbonell Caballero
+                                </a>
+                            </p>
+                            <p class="text-sm text-white/50">Researcher, BSC Computational Biology</p>
+                            <p class="text-xs text-white/40 mt-1">Barcelona Supercomputing Center · Direct collaborator on virtual cell & foundation models</p>
+                        </div>
+                    </article>
+
+                    <!-- Tehseen Zia -->
+                    <article class="reveal delay-6 mentor-card gradient-border p-6 rounded-2xl border border-white/5 flex items-center gap-5">
+                        <div class="flex-shrink-0 w-20 h-20 rounded-full border-2 border-white/10 avatar-gradient-6 flex items-center justify-center text-white text-xl font-bold">
+                            TZ
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white text-base mb-1">
+                                <a href="https://scholar.google.com/citations?user=CuQ9S_kAAAAJ&hl=en"
+                                   class="hover:text-indigo-400 transition-colors"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Dr. Tehseen Zia
+                                </a>
+                            </p>
+                            <p class="text-sm text-white/50">Associate Professor, COMSATS University Islamabad</p>
+                            <p class="text-xs text-white/40 mt-1">
+                                Co-PI at <span class="text-white/40">Medical Imaging and Diagnostics Lab (MIDL)</span> · Master's Supervisor
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
             </div>
         </section>
 
-        <footer class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
-            <p>&copy; 2025 Usman Mohammad. All rights reserved.</p>
-            <p class="mt-1">Last updated: <time datetime="2025-05-01">May 2025</time> | Built with Tailwind CSS.</p>
-            <p class="mt-1">Research profile on <a href="https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en" class="text-blue-600 hover:underline">Google Scholar</a>.</p>
-        </footer>
+        <div class="glow-line max-w-4xl mx-auto"></div>
 
+        <!-- ==================== PUBLICATIONS ==================== -->
+        <section id="publications" class="py-24 lg:py-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="reveal mb-12 text-center">
+                    <p class="text-xs font-medium tracking-[0.2em] uppercase text-indigo-400 mb-3">Publications</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight section-heading text-gradient">Selected Works</h2>
+                </div>
+                <div class="reveal delay-2 max-w-3xl mx-auto">
+                    <div class="gradient-border p-8 rounded-2xl border border-white/5 text-center">
+                        <div class="text-white/20 mb-4">
+                            <i data-lucide="book-open" class="w-12 h-12 mx-auto"></i>
+                        </div>
+                        <p class="text-white/50 text-base leading-relaxed mb-4">
+                            Publications will be listed here as they become available. Visit my Google Scholar profile for the most up-to-date list of research contributions.
+                        </p>
+                        <a href="https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en"
+                           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 hover:border-white/25 hover:bg-white/5 text-white/60 hover:text-white text-sm font-medium transition-all"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-graduation-cap text-sm"></i>
+                            View Google Scholar
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-line max-w-4xl mx-auto"></div>
+
+        <!-- ==================== SKILLS ==================== -->
+        <section id="skills" class="py-24 lg:py-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="reveal mb-12 text-center">
+                    <p class="text-xs font-medium tracking-[0.2em] uppercase text-indigo-400 mb-3">Expertise</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight section-heading text-gradient">Skills & Technologies</h2>
+                </div>
+                <div class="reveal delay-2 flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-indigo-400"></span>Deep Learning
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-indigo-400"></span>Computer Vision
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>PyTorch
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>TensorFlow
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>Python
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400"></span>Single-Cell Analysis
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400"></span>Medical Image Analysis
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>Explainable AI (XAI)
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>Mechanistic Interpretability
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-violet-400"></span>Foundation Models
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-violet-400"></span>Virtual Cell Modeling
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-400"></span>Transfer Learning
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-400"></span>Vision Transformers
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-400"></span>R
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-rose-400"></span>Data Science
+                    </span>
+                    <span class="skill-tag px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/70 text-sm font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-teal-400"></span>Omics Data Analysis
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-line max-w-4xl mx-auto"></div>
+
+        <!-- ==================== CONTACT ==================== -->
+        <section class="py-24 lg:py-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="reveal gradient-border p-12 sm:p-16 rounded-2xl border border-white/5 text-center relative overflow-hidden">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-40 bg-indigo-500/10 blur-[80px] pointer-events-none"></div>
+                    <p class="text-xs font-medium tracking-[0.2em] uppercase text-indigo-400 mb-4 relative">Get in Touch</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4 relative">Let's Collaborate</h2>
+                    <p class="text-white/50 text-base max-w-lg mx-auto mb-8 leading-relaxed relative">
+                        Interested in research collaboration, academic discussions, or AI consulting? I'd love to hear from you.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 relative">
+                        <a href="mailto:sci.ch.usman.shams@gmail.com"
+                           class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all duration-200 shadow-lg shadow-white/10">
+                            <i data-lucide="mail" class="w-4 h-4"></i>Send Email
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohammadusman01/"
+                           class="inline-flex items-center gap-2 px-6 py-3 border border-white/15 text-white/80 text-sm font-medium rounded-full hover:bg-white/5 hover:border-white/25 transition-all duration-200"
+                           target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="relative z-10 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-5 h-5 rounded bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center text-white text-[8px] font-bold">U</div>
+                    <span class="text-white/40 text-xs">&copy; 2025 Usman Mohammad</span>
+                </div>
+                <div class="flex items-center gap-6 flex-wrap justify-center">
+                    <a href="https://scholar.google.com/citations?user=VKqeIG0AAAAJ&hl=en" class="text-white/30 hover:text-white/60 text-xs transition-colors" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                    <a href="https://github.com/MohammadUsman0/" class="text-white/30 hover:text-white/60 text-xs transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.ub.edu/web/portal/en/" class="text-white/30 hover:text-white/60 text-xs transition-colors" target="_blank" rel="noopener noreferrer">University of Barcelona</a>
+                    <a href="https://www.bsc.es/" class="text-white/30 hover:text-white/60 text-xs transition-colors" target="_blank" rel="noopener noreferrer">BSC</a>
+                </div>
+                <p class="text-white/20 text-xs">Last updated May 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        lucide.createIcons();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('open', menuOpen);
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('text-white');
+                link.classList.add('text-white/50');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-white/50');
+                }
+            });
+        });
+
+        const particlesContainer = document.getElementById('particles');
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.bottom = '-10px';
+            particle.style.animationDuration = (8 + Math.random() * 12) + 's';
+            particle.style.animationDelay = Math.random() * 5 + 's';
+            particle.style.width = (1 + Math.random() * 2) + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.opacity = 0.05 + Math.random() * 0.15;
+            particlesContainer.appendChild(particle);
+            setTimeout(() => particle.remove(), 25000);
+        }
+        for (let i = 0; i < 15; i++) {
+            setTimeout(createParticle, i * 800);
+        }
+        setInterval(createParticle, 3000);
+    </script>
+
 </body>
 </html>
